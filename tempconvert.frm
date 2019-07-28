@@ -24,13 +24,13 @@ Begin VB.Form Form1
       _ExtentY        =   5054
       _Version        =   393216
       Tabs            =   4
+      Tab             =   2
       TabsPerRow      =   4
       TabHeight       =   520
       TabCaption(0)   =   "Welcome"
       TabPicture(0)   =   "tempconvert.frx":0000
-      Tab(0).ControlEnabled=   -1  'True
+      Tab(0).ControlEnabled=   0   'False
       Tab(0).Control(0)=   "Label6"
-      Tab(0).Control(0).Enabled=   0   'False
       Tab(0).ControlCount=   1
       TabCaption(1)   =   "Liquids"
       TabPicture(1)   =   "tempconvert.frx":001C
@@ -42,42 +42,121 @@ Begin VB.Form Form1
       Tab(1).ControlCount=   4
       TabCaption(2)   =   "Measurement"
       TabPicture(2)   =   "tempconvert.frx":0038
-      Tab(2).ControlEnabled=   0   'False
-      Tab(2).Control(0)=   "Inches"
-      Tab(2).ControlCount=   1
+      Tab(2).ControlEnabled=   -1  'True
+      Tab(2).Control(0)=   "Label10"
+      Tab(2).Control(0).Enabled=   0   'False
+      Tab(2).Control(1)=   "Slider2"
+      Tab(2).Control(1).Enabled=   0   'False
+      Tab(2).Control(2)=   "Textmm"
+      Tab(2).Control(2).Enabled=   0   'False
+      Tab(2).Control(3)=   "Textcm"
+      Tab(2).Control(3).Enabled=   0   'False
+      Tab(2).Control(4)=   "Textm"
+      Tab(2).Control(4).Enabled=   0   'False
+      Tab(2).Control(5)=   "Textin"
+      Tab(2).Control(5).Enabled=   0   'False
+      Tab(2).Control(6)=   "Textft"
+      Tab(2).Control(6).Enabled=   0   'False
+      Tab(2).Control(7)=   "Textyd"
+      Tab(2).Control(7).Enabled=   0   'False
+      Tab(2).Control(8)=   "Textdm"
+      Tab(2).Control(8).Enabled=   0   'False
+      Tab(2).ControlCount=   9
       TabCaption(3)   =   "Temperature"
       TabPicture(3)   =   "tempconvert.frx":0054
       Tab(3).ControlEnabled=   0   'False
-      Tab(3).Control(0)=   "Label1"
-      Tab(3).Control(0).Enabled=   0   'False
-      Tab(3).Control(1)=   "Label2"
-      Tab(3).Control(1).Enabled=   0   'False
-      Tab(3).Control(2)=   "Label3"
-      Tab(3).Control(2).Enabled=   0   'False
-      Tab(3).Control(3)=   "Label4"
-      Tab(3).Control(3).Enabled=   0   'False
-      Tab(3).Control(4)=   "Label5"
-      Tab(3).Control(4).Enabled=   0   'False
+      Tab(3).Control(0)=   "InTemp"
+      Tab(3).Control(1)=   "Option2"
+      Tab(3).Control(2)=   "Option1"
+      Tab(3).Control(3)=   "OutTemp"
+      Tab(3).Control(4)=   "Slider1"
       Tab(3).Control(5)=   "LabelStatus"
-      Tab(3).Control(5).Enabled=   0   'False
-      Tab(3).Control(6)=   "Slider1"
-      Tab(3).Control(6).Enabled=   0   'False
-      Tab(3).Control(7)=   "OutTemp"
-      Tab(3).Control(7).Enabled=   0   'False
-      Tab(3).Control(8)=   "Option1"
-      Tab(3).Control(8).Enabled=   0   'False
-      Tab(3).Control(9)=   "Option2"
-      Tab(3).Control(9).Enabled=   0   'False
-      Tab(3).Control(10)=   "InTemp"
-      Tab(3).Control(10).Enabled=   0   'False
+      Tab(3).Control(6)=   "Label5"
+      Tab(3).Control(7)=   "Label4"
+      Tab(3).Control(8)=   "Label3"
+      Tab(3).Control(9)=   "Label2"
+      Tab(3).Control(10)=   "Label1"
       Tab(3).ControlCount=   11
-      Begin VB.Frame Inches 
-         Caption         =   "Inches"
-         Height          =   855
-         Left            =   -74880
-         TabIndex        =   19
-         Top             =   360
-         Width           =   5535
+      Begin VB.TextBox Textdm 
+         Alignment       =   2  'Center
+         Height          =   375
+         Left            =   3360
+         Locked          =   -1  'True
+         TabIndex        =   29
+         Text            =   "0dm"
+         Top             =   840
+         Width           =   735
+      End
+      Begin VB.TextBox Textyd 
+         Alignment       =   2  'Center
+         Height          =   375
+         Left            =   4680
+         Locked          =   -1  'True
+         TabIndex        =   28
+         Text            =   ".yd"
+         Top             =   1920
+         Width           =   735
+      End
+      Begin VB.TextBox Textft 
+         Alignment       =   2  'Center
+         Height          =   375
+         Left            =   2520
+         Locked          =   -1  'True
+         TabIndex        =   27
+         Text            =   ".ft"
+         Top             =   1920
+         Width           =   735
+      End
+      Begin VB.TextBox Textin 
+         Alignment       =   2  'Center
+         Height          =   375
+         Left            =   360
+         Locked          =   -1  'True
+         TabIndex        =   26
+         Text            =   ".in"
+         Top             =   1920
+         Width           =   735
+      End
+      Begin VB.TextBox Textm 
+         Alignment       =   2  'Center
+         Height          =   375
+         Left            =   4680
+         Locked          =   -1  'True
+         TabIndex        =   25
+         Text            =   "0m"
+         Top             =   840
+         Width           =   735
+      End
+      Begin VB.TextBox Textcm 
+         Alignment       =   2  'Center
+         Height          =   375
+         Left            =   1680
+         Locked          =   -1  'True
+         TabIndex        =   24
+         Text            =   "0cm"
+         Top             =   840
+         Width           =   735
+      End
+      Begin VB.TextBox Textmm 
+         Alignment       =   2  'Center
+         Height          =   375
+         Left            =   360
+         Locked          =   -1  'True
+         TabIndex        =   23
+         Text            =   "0mm"
+         Top             =   840
+         Width           =   735
+      End
+      Begin MSComctlLib.Slider Slider2 
+         Height          =   495
+         Left            =   240
+         TabIndex        =   21
+         Top             =   1320
+         Width           =   5295
+         _ExtentX        =   9340
+         _ExtentY        =   873
+         _Version        =   393216
+         Max             =   1000
       End
       Begin VB.CommandButton CalculateBtn 
          Caption         =   "Calculate"
@@ -106,6 +185,7 @@ Begin VB.Form Form1
          Width           =   735
       End
       Begin VB.TextBox InTemp 
+         Alignment       =   2  'Center
          Height          =   375
          Left            =   -73080
          Locked          =   -1  'True
@@ -132,6 +212,7 @@ Begin VB.Form Form1
          Width           =   1815
       End
       Begin VB.TextBox OutTemp 
+         Alignment       =   2  'Center
          Height          =   375
          Left            =   -72000
          Locked          =   -1  'True
@@ -166,7 +247,7 @@ Begin VB.Form Form1
             Height          =   375
             Left            =   3120
             Locked          =   -1  'True
-            TabIndex        =   20
+            TabIndex        =   19
             Text            =   "29.57"
             Top             =   240
             Width           =   735
@@ -175,7 +256,7 @@ Begin VB.Form Form1
             Caption         =   "mL"
             Height          =   255
             Left            =   3840
-            TabIndex        =   21
+            TabIndex        =   20
             Top             =   360
             Width           =   255
          End
@@ -196,10 +277,19 @@ Begin VB.Form Form1
             Width           =   735
          End
       End
+      Begin VB.Label Label10 
+         Alignment       =   2  'Center
+         Caption         =   "Meter Stick"
+         Height          =   255
+         Left            =   2400
+         TabIndex        =   22
+         Top             =   480
+         Width           =   975
+      End
       Begin VB.Label Label6 
          Caption         =   $"tempconvert.frx":0070
          Height          =   735
-         Left            =   840
+         Left            =   -74160
          TabIndex        =   12
          Top             =   960
          Width           =   4455
@@ -389,4 +479,56 @@ End Sub
 Private Sub Slider1_MouseMove(Button As Integer, Shift As Integer, x As Single, y As Single)
     TempCalculate
 
+End Sub
+
+Private Sub Slider2_MouseMove(Button As Integer, Shift As Integer, x As Single, y As Single)
+    MeterStick
+End Sub
+
+Private Sub Slider2_KeyDown(KeyAscii As Integer, Shift As Integer)
+    If KeyAscii = 40 Then ' Down
+        Slider2.Value = Slider2.Value - 5
+        MeterStick
+    ElseIf KeyAscii = 38 Then ' Up
+        Slider2.Value = Slider2.Value + 5
+        MeterStick
+    ElseIf KeyAscii = 37 Then ' Left
+        Slider2.Value = Slider2.Value - 1
+        MeterStick
+    ElseIf KeyAscii = 39 Then ' Right
+        Slider2.Value = Slider2.Value + 1
+        MeterStick
+    End If
+End Sub
+
+Public Sub MeterStick()
+        ' -- Millimeters --
+        Textmm.Text = Slider2.Value & "mm"
+        ' -- Millimeters to Centimeters --
+        Textcm.Text = Slider2.Value / 10 & "cm"
+        ' -- Millimeters to Decimeters --
+        Textdm.Text = Slider2.Value / 100 & "dm"
+        ' -- Millimeters to Meters --
+        Textm.Text = Slider2.Value / 1000 & "m"
+
+        ' -- Millimeters to Inches --
+        ' Result truncated to last two numbers past the decimal
+        Dim Mm2In As Double
+        Mm2In = (Slider2.Value / 25.4)
+        Textin.Text = Format(Mm2In, "#.##") & "in"
+        ' -----------------------
+
+        ' -- Millimeters to Feet --
+        ' Result truncated to last two numbers past the decimal
+        Dim Cm2Ft As Double
+        Cm2Ft = (Slider2.Value / 304.8)
+        Textft.Text = Format(Cm2Ft, "#.##") & "ft"
+        ' -----------------------
+        
+        ' -- Millimeters to Yards --
+        ' Result truncated to last two numbers past the decimal
+        Dim M2Yd As Double
+        M2Yd = (Slider2.Value / 914.4)
+        Textyd.Text = Format(M2Yd, "#.##") & "yd"
+        ' -----------------------
 End Sub
